@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Aqoon Kaabe E-learning</title>
 </head>
-<body class="md:bg-purple-50 bg-gray-600">
+<body >
+ <section class="md:bg-purple-50 bg-gray-600 pb-32">
     <header class="bg-white shadow-md p-4">
         <div class="container mx-auto flex flex-row justify-between items-center">
             <div class="flex items-center space-x-2">
@@ -14,13 +15,13 @@
                 <span class="text-xl font-bold  md:block text-purple-700">Aqoon Kaabe E-learning</span>
             </div>
             <nav class="hidden md:flex space-x-4">
-                <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
-                <a href="courses.html" class="text-gray-700 hover:text-gray-900">Courses</a>
-                <a href="contact.html" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+                <a href="index.html" class="text-gray-700 hover:text-gray-900">Home</a>
+                <a href="#courses" class="text-gray-700 hover:text-gray-900">Courses</a>
+                <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact Us</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <button class="text-gray-700 hover:text-gray-900">Login</button>
-                <button class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">Sign Up</button>
+                <button class="text-gray-700 hover:text-gray-900"><a href="sign-in.html">Login</a></button>
+                <button class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800"><a href="sign-up.html">Sign Up</a></button>
                 <img src="images/menu-svgrepo-com.svg" class="w-8 h-8 cursor-pointer md:hidden" alt="Menu Icon">
             </div>
         </div>
@@ -31,12 +32,125 @@
             <p class="mt-4 md:text-gray-600 text-gray-100">We have 50+ Online courses & 200k+ Online registered students. Find your desired Courses from them.</p>
             <div class="mt-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                 <button class="bg-purple-700 text-white px-4 py-2 md:px-6 md:py-3 rounded hover:bg-purple-800">Get Started</button>
-                <button class="bg-white text-gray-700 border border-gray-300 px-4 py-2 md:px-6 md:py-3 rounded hover:bg-gray-100">Browse Courses</button>
+                <button class="bg-white text-gray-700 border border-gray-300 px-4 py-2 md:px-6 md:py-3 rounded hover:bg-gray-100"><a href="courses.html">Browse Courses</a></button>
             </div>
         </div>
         <div class="w-full md:w-[334px] h-[400px] object-contain">
             <img src="images/WhatsApp_Image_2025-03-11_at_19.22.44-removebg-preview.png" class="h-auto w-full object-cover" alt="Student">
         </div>
     </main>
+</section>
+
+
+    <section id="courses" class="container mx-auto mt-32"> 
+        <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+        
+            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+              <div class="group relative">
+                <img src="courses/Web-Development-Course-Thumbnail.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="mt-4 flex justify-between">
+                  <div>
+                    <h3 class="text-sm text-gray-700">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Web Development
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-900">$35</p>
+                </div>
+                <div class="cart w-full h-[10%] text-center">
+                  <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+              </div>
+              <div class="group relative">
+                <img src="courses/download (2).jpeg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="mt-4 flex justify-between">
+                  <div>
+                    <h3 class="text-sm text-gray-700">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Graphic Design
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-900">$35</p>
+                </div>
+                <div class="cart w-full h-[10%] text-center">
+                  <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+              </div>
+              <div class="group relative">
+                <img src="courses/UX-design-courses.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="mt-4 flex justify-between">
+                  <div>
+                    <h3 class="text-sm text-gray-700">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Ui/Ux Design 
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-900">$35</p>
+                </div>
+                <div class="cart w-full h-[10%] text-center">
+                  <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+              </div>
+              <div class="group relative">
+                <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+                <div class="mt-4 flex justify-between">
+                  <div>
+                    <h3 class="text-sm text-gray-700">
+                      <a href="#">
+                        <span aria-hidden="true" class="absolute inset-0"></span>
+                        Basic Tee
+                      </a>
+                    </h3>
+                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                  </div>
+                  <p class="text-sm font-medium text-gray-900">$35</p>
+                </div>
+                <div class="cart w-full h-[10%] text-center">
+                  <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                </div>
+    </section>
+    <section id="contact">
+        <main class="container mx-auto my-10 p-6 bg-white shadow-lg rounded-md">
+            <h1 class="text-3xl font-bold text-gray-800 text-center">Contact Us</h1>
+            <p class="text-gray-600 text-center mt-2">We'd love to hear from you. Fill out the form below!</p>
+    
+            <form class="mt-6 space-y-4">
+                <div class="grid grid-cols-1  gap-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded">
+                    <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded">
+                </div>
+        
+                <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded h-32"></textarea>
+                <button type="submit" class="bg-purple-700 text-white px-6 py-3 rounded hover:bg-purple-800">Send Message</button>
+            </form>
+        </main>
+    
+        <!-- Contact Details -->
+        <section class="container mx-auto my-10 p-6 text-center">
+            <h2 class="text-2xl font-semibold text-gray-800">Our Contact Information</h2>
+            <p class="text-gray-600 mt-2">Reach out to us through the details below:</p>
+            <div class="mt-4 space-y-2">
+                <p class="text-gray-700"><strong>Email:</strong> support@aqoonkaabe.com</p>
+                <p class="text-gray-700"><strong>Phone:</strong> +252 61 8601078</p>
+                <p class="text-gray-700"><strong>Address:</strong> Mogadishu, Somalia</p>
+            </div>
+        </section>
+    
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+            &copy; 2025 Aqoon Kaabe E-learning. All rights reserved.
+        </footer>
+
+    </section>
 </body>
 </html>
