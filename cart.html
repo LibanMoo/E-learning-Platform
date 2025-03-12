@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-md">
+        <h1 class="text-3xl font-bold text-gray-800 text-center">Your Shopping Cart</h1>
+
+        <div id="cart-items" class="mt-6 space-y-4">
+            <!-- Dynamic cart items will be inserted here -->
+        </div>
+
+        <!-- Total Price -->
+        <div class="mt-6 text-right">
+            <h2 class="text-xl font-bold">Total: $<span id="cart-total">0.00</span></h2>
+        </div>
+
+        <!-- Checkout Button -->
+        <div class="mt-6 text-center">
+            <button id="checkout-btn" class="bg-purple-700 text-white px-6 py-3 rounded hover:bg-purple-800">
+               <a href="checkout.html"> Proceed to Checkout</a>
+            </button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-10">
+        &copy; 2025 Aqoon Kaabe E-learning. All rights reserved.
+    </footer>
+
+    <script>
+       document.addEventListener("DOMContentLoaded", function () {
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    updateCartDisplay();
+
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function () {
+            const courseName = this.dataset.name;
+            const coursePrice = parseFloat(this.dataset.price);
+
+            cartItems.push({ name: courseName, price: coursePrice });
+            localStorage.setItem("cart", JSON.stringify(cartItems));
+
+            updateCartDisplay();
+        });
+    });
+
+    function updateCartDisplay() {
+        const cartCount = document.getElementById("cart-count");
+        if (cartCount) {
+            cartCount.textContent = cartItems.length;
+        }
+    }
+
+    // Cart page functionality
+    if (document.getElementById("cart-items")) {
+        const cartContainer = document.getElementById("cart-items");
+        const totalPriceEl = document.getElementById("total-price");
+
+        if (cartItems.length === 0) {
+            cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            let totalPrice = 0;
+            cartContainer.innerHTML = cartItems.map((item, index) => {
+                totalPrice += item.price;
+                return `<div class="border p-2 mb-2 flex justify-between">
+                            <span>${item.name} - $${item.price}</span>
+                            <button class="remove-item text-red-500" data-index="${index}">Remove</button>
+                        </div>`;
+            }).join("");
+            totalPriceEl.textContent = totalPrice.toFixed(2);
+        }
+
+        document.querySelectorAll(".remove-item").forEach(button => {
+            button.addEventListener("click", function () {
+                const index = this.dataset.index;
+                cartItems.splice(index, 1);
+                localStorage.setItem("cart", JSON.stringify(cartItems));
+                location.reload();
+            });
+        });
+
+        document.getElementById("clear-cart").addEventListener("click", function () {
+            localStorage.removeItem("cart");
+            location.reload();
+        });
+    }
+});
+
+    </script>
+    
+</body>
+</html>

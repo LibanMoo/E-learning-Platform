@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="output.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="output.css">
+</head>
+<body>
+  
 <div class="bg-white p-4">
     <div class="md:max-w-5xl max-w-xl mx-auto">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -36,20 +45,40 @@
               </div>
             </div>
 
-            <button type="button" class="mt-8 w-40 py-3 text-[15px] font-medium bg-purple-500 text-white rounded-md hover:bg-purple-600 tracking-wide">Pay  </button>
+            <button type="button" class="mt-8 w-40 py-3 text-[15px] font-medium bg-purple-500 text-white rounded-md hover:bg-purple-600 tracking-wide">Pay</button>
           </form>
         </div>
 
         <div class="bg-gray-100 p-6 rounded-md">
-          <h2 class="text-3xl font-bold text-slate-900">$250.00</h2>
+          <h2 class="text-3xl font-bold text-slate-900" id="total-amount">$250.00</h2>
 
           <ul class="text-slate-900 font-medium mt-12 space-y-4">
-            <li class="flex flex-wrap gap-4 text-sm">Split Sneakers <span class="ml-auto font-bold">$150.00</span></li>
+            <li class="flex flex-wrap gap-4 text-sm">Split Sneakers <span class="ml-auto font-bold">0$150.0</span></li>
             <li class="flex flex-wrap gap-4 text-sm">Echo Elegance <span class="ml-auto font-bold">$90.00</span></li>
             <li class="flex flex-wrap gap-4 text-sm">Tax <span class="ml-auto font-bold">$10.00</span></li>
-            <li class="flex flex-wrap gap-4 text-sm font-bold border-t-2 pt-4">Total <span class="ml-auto">$250.00</span></li>
+            <li class="flex flex-wrap gap-4 text-sm font-bold border-t-2 pt-4">Total <span class="ml-auto" id="total">$250.00</span></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    // Example of dynamically updating the total amount
+    const totalAmountElement = document.getElementById('total-amount');
+    const totalElement = document.getElementById('total');
+
+    // Example values
+    const items = [
+      { name: 'Split Sneakers', price: 150 },
+      { name: 'Echo Elegance', price: 90 },
+      { name: 'Tax', price: 10 }
+    ];
+
+    const totalAmount = items.reduce((sum, item) => sum + item.price, 0);
+
+    totalAmountElement.textContent = `$${totalAmount.toFixed(2)}`;
+    totalElement.textContent = `$${totalAmount.toFixed(2)}`;
+  </script>
+</body>
+</html>
