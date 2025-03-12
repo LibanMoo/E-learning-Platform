@@ -37,7 +37,6 @@
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
     --radius-md: 0.375rem;
-    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -251,12 +250,6 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
-  .h-2\/6 {
-    height: calc(2/6 * 100%);
-  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -347,9 +340,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -362,6 +352,12 @@
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
+  }
+  .bg-\[\#\#FAF5FF\] {
+    background-color: ##FAF5FF;
+  }
+  .bg-\[\#FAF5FF\] {
+    background-color: #FAF5FF;
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
@@ -401,9 +397,6 @@
   }
   .pt-\[5px\] {
     padding-top: 5px;
-  }
-  .pt-\[50\%\] {
-    padding-top: 50%;
   }
   .text-center {
     text-align: center;

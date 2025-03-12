@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="output.css">
+  <script src="https://kit.fontawesome.com/4be9701c6b.js" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
  
-  <div class="bg-green-300 w-full h-full">
-    <nav>
+  <div class="w-full h-full bg-[#FAF5FF]">
+    <nav class="bg-white shadow-md p-4">
         <div class="container mx-auto flex flex-row justify-between items-center">
             <div class="flex items-center space-x-2">
                 <img src="images/view-3d-book-with-graduation-cap.jpg" class="w-12 h-12 object-cover rounded-full" alt="Logo">
                 <span class="text-xl font-bold  md:block text-purple-700">Aqoon Kaabe E-learning</span>
             </div>
-            <nav class="hidden md:flex space-x-4">
+            <div class="hidden md:flex space-x-4">
                 <a href="index.html" class="text-gray-700 hover:text-gray-900">Home</a>
                 <a href="courses.html" class="text-gray-700 hover:text-gray-900">Courses</a>
                 <a href="#" class="text-gray-700 hover:text-gray-900">Contact Us</a>
-            </nav>
+            </div>
             <div class="flex items-center space-x-4">
                 <button class="text-gray-700 hover:text-gray-900">Login</button>
                 <button class="bg-purple-700 text-white px-4 py-2 rounded hover:bg-purple-800">Sign Up</button>
@@ -31,6 +32,60 @@
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
   
       <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div class="group relative">
+          <img src="courses/Web-Development-Course-Thumbnail.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Web Development
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+          <div class="cart w-full h-[10%] text-center">
+            <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="courses/download (2).jpeg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Graphic Design
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+          <div class="cart w-full h-[10%] text-center">
+            <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="courses/UX-design-courses.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 flex justify-between">
+            <div>
+              <h3 class="text-sm text-gray-700">
+                <a href="#">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Ui/Ux Design 
+                </a>
+              </h3>
+              <p class="mt-1 text-sm text-gray-500">Eng Hussein</p>
+            </div>
+            <p class="text-sm font-medium text-gray-900">$35</p>
+          </div>
+          <div class="cart w-full h-[10%] text-center">
+            <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+          </div>
+        </div>
         <div class="group relative">
           <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
           <div class="mt-4 flex justify-between">
@@ -46,52 +101,7 @@
             <p class="text-sm font-medium text-gray-900">$35</p>
           </div>
           <div class="cart w-full h-[10%] text-center">
-            <button class="pt-[5px] w-full h-full bg-blue-600 rounded">Add to Cart</button>
-          </div>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">Black</p>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
-          </div>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">Black</p>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
-          </div>
-        </div>
-        <div class="group relative">
-          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Front of men&#039;s Basic Tee in black." class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
-          <div class="mt-4 flex justify-between">
-            <div>
-              <h3 class="text-sm text-gray-700">
-                <a href="#">
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  Basic Tee
-                </a>
-              </h3>
-              <p class="mt-1 text-sm text-gray-500">Black</p>
-            </div>
-            <p class="text-sm font-medium text-gray-900">$35</p>
+            <button class="pt-[5px] w-full h-full bg-purple-700 text-white rounded">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
           </div>
         </div>
   
